@@ -1,2 +1,1 @@
-# gremlin654-JSFEPRESCHOOL
-Private repository for @gremlin654
+# image-galery rs-school task
