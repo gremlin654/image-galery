@@ -1,0 +1,190 @@
+/*-----Обнуление---------------------------------------------*/
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+*,*:before,*:after{
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{
+    outline: none;
+}
+
+nav, footer, header, aside{display: block;}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: -1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+input, button,textarea{font-family: inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner{padding: 0;border: 0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
+/*-----Контент контейнер---------------------------------------------*/
+.wrapper {
+    max-width: 1280px;
+    padding: 0px 20px;
+    margin: auto;
+}
+p {
+    font-size: 1.4rem;
+}
+.download-link{
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: #fff;
+    border: 1px solid #000;
+    border-radius: 2px;
+    background: darkgray;
+    padding: 3px;
+    margin-top: 3px;
+    transition: all 0.30s ease-in-out;
+}
+.download-link:hover {
+    transition: all 0.30s ease-in-out;
+    color: #000;
+    background: orange;
+}
+/*-----Header---------------------------------------------*/
+header {
+    border-bottom: 5px solid orange;
+}
+.header .wrapper{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 70px;
+    
+}
+.header h2{
+    font-family: 'Comfortaa', cursive;
+    font-size: 2rem;
+}
+.search_box input {
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 1rem;
+    padding: 8px 12px;
+    border-radius: 25px;
+    outline: none;
+    transition: all 0.30s ease-in-out;
+    border: 1px solid #DDDDDD;
+    padding-right: 48px;
+}
+.search_box {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    width: 220px;
+}
+
+.input-search {
+    padding-left: 20px;
+}
+.search_box i {
+    color: black;
+    cursor: pointer;
+    transition: 1s;
+}
+.search_box i:hover {
+    color: orange;
+}
+input:focus {
+    box-shadow: 0 0 5px orange;
+    border: 1px solid orange;
+}
+#search {
+    margin-left: -26px;
+}
+#close {
+    margin-left: -30px;
+}
+.active-close {
+    display: none;
+}
+/*-----Main---------------------------------------------*/
+.container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+.image-galery {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 20px;
+}
+.image-result {
+    width: 300px;
+    height: 200px;
+    cursor: pointer;
+    object-fit: cover;
+    object-position: center;
+}
+.container-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/*-----Footer---------------------------------------------*/
+.footer .wrapper {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 70px;
+}
+footer {
+    border-top: 5px solid orange;
+    margin-top: 20px;
+}
+.social-link {
+    background-size: contain;
+    background-repeat: no-repeat;  
+    transition: 0.3s;
+}
+.social-link:hover {
+    filter: invert(63%) sepia(100%) saturate(1747%) hue-rotate(360deg) brightness(103%) contrast(100%);
+}
+/*-----Media---------------------------------------------*/
+@media (max-width: 414px) {
+    .header h2 {
+        text-align: center;
+    }
+    .header .wrapper {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .search_box input {
+        margin: 7px 0px;
+    }
+}
+@media (max-width: 280px) {
+    .image-result {
+        width: 250px;
+        height: 150px;
+    }
+}
